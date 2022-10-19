@@ -1,0 +1,96 @@
+<!-- JavaScript Assignment 21 PDF -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wish {
+        color: red;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      /* Question 7. */
+      h2 {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body onbeforeunload="return myFunction()">
+    <h1>>Question 1., 2.</h1>
+    <h2 id="wish">Whats up?</h2>
+
+    <h1>>Question 3.</h1>
+    <h2>Calculator</h2>
+    <p id="sum"></p>
+    <input type="number" placeholder="Enter number a" id="inputA" />
+    <input type="number" placeholder="Enter number b" id="inputB" />
+    <button id="btn" onclick="add()">Add</button>
+
+    <h1>>Question 4.</h1>
+    <h2>class is called by getElementById</h2>
+
+    <h1>>Question 5.</h1>
+
+    <h1>>Question 6., 7. - Also implemented with Success</h1>
+    <button id="hello" onclick="hello()">Hello</button>
+
+    <h1>>Question 9.</h1>
+    <button id="removebtn" onclick="removeElement()">Remove me</button>
+
+    <h1>>Question 10.</h1>
+    <button id="ptagbtn" onclick="getPTags()">Get Number of p tags</button>
+
+    <h1>>Question 11.</h1>
+    <form id="form1" onsubmit="getFormValue()">
+      Name: <input type="text" id="name" /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+      document.getElementById("wish").innerHTML = "Hello World";
+      function add() {
+        document.getElementById("sum").innerHTML =
+          Number(document.getElementById("inputA").value) +
+          Number(document.getElementById("inputB").value);
+      }
+      function hello() {
+        console.log("Hello");
+      }
+      // Question 6.
+      function myFunction() {
+        return "Write something clever here...";
+      }
+      // Question 8.
+      const h4 = document.createElement("H4");
+      const textNode = document.createTextNode(
+        "Question 8. Create a new <h4> tag on the screen using JS DOM."
+      );
+      h4.appendChild(textNode);
+      document.body.appendChild(h4);
+
+      // Question 9.
+      function removeElement() {
+        const e = document.getElementById("removebtn");
+        e.remove();
+      }
+
+      function getPTags() {
+        let count = 0;
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+          count++;
+        }
+        // alert(paragraphs[i].innerHTML);
+        alert(count);
+      }
+      function getFormValue() {
+        // document.getElementById("form1").submit();
+        alert(`Name: ${document.getElementById("name").value}`)
+      }
+    </script>
+  </body>
+</html>
