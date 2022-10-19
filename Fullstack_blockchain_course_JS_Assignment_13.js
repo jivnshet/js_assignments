@@ -1,4 +1,4 @@
-// JavaScript Assignment 12 PDF
+// JavaScript Assignment 13 PDF
 
 // Question 1.
 
@@ -14,7 +14,7 @@ console.log(average);
 
 // -----------*-----------*-----------*-----------*-----------*-----------
 
-// Question 2. Doubtful
+// Question 2.
 
 let students = [
   { name: "John", marks: 92 },
