@@ -34,7 +34,7 @@ console.log(average);
 
 // -----------*-----------*-----------*-----------*-----------*-----------
 
-// Question 2. Doubtful
+// Question 2.
 
 var students = {
   id: [1,2,3],
